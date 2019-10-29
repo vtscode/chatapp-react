@@ -4,7 +4,7 @@ import * as ReactDOM from 'react-dom';
 
 class MessageList extends React.Component {
 
-    componentWillUpdate() {
+    UNSAFE_componentWillUpdate() {
         const node = ReactDOM.findDOMNode(this)
         this.shouldScrollToBottom = node.scrollTop + node.clientHeight + 100 >= node.scrollHeight
     }
@@ -21,7 +21,7 @@ class MessageList extends React.Component {
             return (
                 <div className="message-list">
                     <div className="join-room">
-                        &larr; Join a room!
+                        Join a room! &rarr;
                     </div>
                 </div>
             )
